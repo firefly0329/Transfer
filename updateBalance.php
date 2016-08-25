@@ -10,6 +10,13 @@ $money = $_GET['money'];
 $transid = $_GET['transid'];
 
 $member = $myModle->getMember($account);
+//==========判斷是否輸入IN OUT=========
+if($type == "IN" or $type == "OUT"){
+
+}else{
+    echo "enter IN or OUT please";
+    exit;
+}
 //==========判斷金額是否為正===========
 if($money <= 0){
     echo "money must be positive";
