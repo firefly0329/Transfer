@@ -2,8 +2,14 @@
 
 require_once("Models.php");
 
-$myModle = new Models;
 $account = $_GET['account'];
+
+$myModle = new Models;
+$memer = $myModle->getMember($account);
+if($memer['account'] == $account){
+    echo "please change another account";
+    exit();
+}
 $result = $myModle->addMember($account);
 
 if ($result == true) {

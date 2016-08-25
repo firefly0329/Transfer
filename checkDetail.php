@@ -6,6 +6,10 @@ $account = $_GET['account'];
 $transid = $_GET['transid'];
 
 $myModle = new Models;
-$result = $myModle->checkDetail($account, $transid);
+$detail = $myModle->checkDetail($account, $transid);
 
-var_dump($result);
+if ($detail == false) {
+    echo "no data";
+} else {
+    var_dump($detail);
+}

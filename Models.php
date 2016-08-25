@@ -13,11 +13,23 @@ class Models
         return $result;
     }
 
-    function getBalance($account)
+    function getMember($account)
     {
         $pdo = new DatabasePDO;
-            $grammer = "SELECT `balance` FROM `Member` WHERE `account` = :account";
+            $grammer = "SELECT * FROM `Member` WHERE `account` = :account";
             $paramArray = [':account' => $account];
+            $result = $pdo->selectOnce($grammer, $paramArray);
+        return $result;
+    }
+
+    function getDetail($account, $transid)
+    {
+        $pdo = new DatabasePDO;
+            $grammer = "SELECT * FROM `detail` WHERE `account` = :account and `transid` = :transid";
+            $paramArray = [
+                ':account' => $account,
+                ':transid' => $transid
+            ];
             $result = $pdo->selectOnce($grammer, $paramArray);
         return $result;
     }
@@ -50,6 +62,7 @@ class Models
         $result = $pdo->change($grammer, $paramArray);
         return $result;
     }
+
     function checkDetail($account, $transid)
     {
         $pdo = new DatabasePDO;
