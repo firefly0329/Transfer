@@ -20,26 +20,26 @@
             <p class="">=====================================================</p>
             <h3>新增帳號</h3>
             <p class="">api名稱-addMember</p>
-            <p class="">參數1:(string)account=帳號</p>
+            <p class="">參數1:account=帳號 (英文或數字，字數11以內)</p>
             <p class="">ex: https://leb-firefly0329.c9users.io/Transfer/api/addMember/apple</p>
             <p class="">=====================================================</p>
             <h3>取得餘額</h3>
             <p class="">api名稱-getBalance</p>
-            <p class="">參數1:(string)account=帳號</p>
+            <p class="">參數1:account=帳號 (英文或數字，字數11以內)</p>
             <p class="">ex: https://leb-firefly0329.c9users.io/Transfer/api/getBalance/apple</p>
             <p class="">=====================================================</p>
             <h3>轉帳</h3>
             <p class="">api名稱-updateBalance</p>
-            <p class="">參數1:(string)account=帳號</p>
-            <p class="">參數2:(string)type=轉出轉入(IN,OUT)</p>
-            <p class="">參數3:(int)money=金額</p>
-            <p class="">參數4:(int)transid=轉帳序號</p>
+            <p class="">參數1:account=帳號 (英文或數字，字數11以內)</p>
+            <p class="">參數2:type=轉出轉入(IN,OUT)</p>
+            <p class="">參數3:money=金額 (數字，字數9以內)</p>
+            <p class="">參數4:transid=轉帳序號 (數字，字數9以內)</p>
             <p class="">ex: https://leb-firefly0329.c9users.io/Transfer/api/updateBalance/apple/IN/500/778</p>
             <p class="">=====================================================</p>
             <h3>轉帳確認</h3>
             <p class="">api名稱-checkDetail</p>
-            <p class="">參數1:(string)account=帳號</p>
-            <p class="">參數2:(int)transid=轉帳序號</p>
+            <p class="">參數1:account=帳號  (英文或數字，字數11以內)</p>
+            <p class="">參數2:transid=轉帳序號  (數字，字數9以內)</p>
             <p class="">ex: https://leb-firefly0329.c9users.io/Transfer/api/checkDetail/apple/778</p>
 
 
