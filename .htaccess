@@ -1,9 +1,9 @@
 Options +FollowSymlinks
 RewriteEngine on
 
-RewriteRule ^api/addMember/([0-9A-Za-z]{1,11}+)*   addMember.php?account=$1 [nc,qsa]
-RewriteRule ^api/getBalance/([0-9A-Za-z]{1,11}+)*   getBalance.php?account=$1 [nc,qsa]
-RewriteRule ^api/updateBalance/([0-9A-Za-z]{1,11}+)/([A-Z]+)/([0-9]{1,11}+)/([0-9]{1,11}+)$   updateBalance.php?account=$1&type=$2&money=$3&transid=$4 [nc,qsa]
-RewriteRule ^api/checkDetail/([0-9A-Za-z]{1,11}+)/([0-9]{1,11}+)*   checkDetail.php?account=$1&transid=$2 [nc,qsa]
+RewriteRule ^api/addMember/([0-9A-Za-z]{1,11})*   addMember.php?account=$1 [nc,qsa]
+RewriteRule ^api/getBalance/([0-9A-Za-z]{1,11})*   getBalance.php?account=$1 [nc,qsa]
+RewriteRule ^api/updateBalance/([0-9A-Za-z]{1,11})/([A-Z]+)/([0-9]{1,9})/([0-9]{1,9})$   updateBalance.php?account=$1&type=$2&money=$3&transid=$4 [nc,qsa]
+RewriteRule ^api/checkDetail/([0-9A-Za-z]{1,11})/([0-9]{1,9})*   checkDetail.php?account=$1&transid=$2 [nc,qsa]
 
 ErrorDocument 404 /Transfer/error404.php

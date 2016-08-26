@@ -10,7 +10,7 @@
 
 api名稱-addMember
 
-參數1:(string)account=帳號
+參數1:(string)account=帳號 (英文或數字，字數11以內)
 
 ex:
 https://leb-firefly0329.c9users.io/Transfer/api/addMember/apple
@@ -21,7 +21,7 @@ https://leb-firefly0329.c9users.io/Transfer/api/addMember/apple
 
 api名稱-getBalance
 
-參數1:(string)account=帳號
+參數1:account=帳號 (英文或數字，字數11以內)
 
 ex:
 https://leb-firefly0329.c9users.io/Transfer/api/getBalance/apple
@@ -32,13 +32,13 @@ https://leb-firefly0329.c9users.io/Transfer/api/getBalance/apple
 
 api名稱-updateBalance
 
-參數1:(string)account=帳號
+參數1:account=帳號 (英文或數字，字數11以內)
 
-參數2:(string)type=轉出轉入(IN,OUT)
+參數2:type=轉出轉入(IN,OUT)
 
-參數3:(int)money=金額
+參數3:money=金額 (數字，字數9以內)
 
-參數4:(int)transid=轉帳序號
+參數4:transid=轉帳序號 (數字，字數9以內)
 
 ex:
 https://leb-firefly0329.c9users.io/Transfer/api/updateBalance/apple/IN/500/778
@@ -49,9 +49,9 @@ https://leb-firefly0329.c9users.io/Transfer/api/updateBalance/apple/IN/500/778
 
 api名稱-checkDetail
 
-參數1:(string)account=帳號
+參數1:account=帳號  (英文或數字，字數11以內)
 
-參數2:(int)transid=轉帳序號
+參數2:transid=轉帳序號  (數字，字數9以內)
 
 ex:
 https://leb-firefly0329.c9users.io/Transfer/api/checkDetail/apple/778

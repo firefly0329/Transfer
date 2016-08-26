@@ -28,7 +28,7 @@ if ($member == false) {
     exit();
 }
 //==========判斷餘額是否足夠===========
-if ($type == "OUT" && $money >= $member['balance']) {
+if ($type == "OUT" && $money > $member['balance']) {
     echo "There is not enough balance";
     exit();
 }
